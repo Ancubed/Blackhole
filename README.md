@@ -4,7 +4,7 @@
 
 # Demo
 
-Demo available [https://blackhole.ancubed.me](https://blackhole.ancubed.me)
+Demo available [blackhole.ancubed.me](https://blackhole.ancubed.me)
 
 # Getting Started with Create React App
 
