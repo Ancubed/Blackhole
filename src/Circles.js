@@ -14,7 +14,7 @@ function Circles() {
         'textures/torus/Marble012_1K_Roughness.jpg',
     ])
 
-    useFrame((state, delta) => (ref.current.rotation.z += config.circlesRotationSpeed))
+    useFrame(() => (ref.current.rotation.z += config.circlesRotationSpeed))
 
     return (
         <Torus 

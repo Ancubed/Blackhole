@@ -7,7 +7,7 @@ import config from './blackHoleConfig.json'
 function StarsWrapper() {
     const ref = useRef()
 
-    useFrame((state, delta) => (ref.current.rotation.y += config.starsRotationSpeed))
+    useFrame(() => (ref.current.rotation.y += config.starsRotationSpeed))
 
     return (
         <Stars 
