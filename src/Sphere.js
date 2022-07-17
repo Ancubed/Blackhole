@@ -9,7 +9,7 @@ function Light() {
     const ref = useRef()
 
     const [colorMap, normalMap, roughnessMap] = useLoader(TextureLoader, [
-        'textures/torus/Marble012_1K_Color.jpg',
+        'textures/torus/ReverseStarmap.png',
         'textures/torus/Marble012_1K_NormalGL.jpg',
         'textures/torus/Marble012_1K_Roughness.jpg',
     ])
@@ -19,7 +19,7 @@ function Light() {
     return (
         <Torus 
             ref={ref} 
-            args={[1, 0.22, 20, 100]}
+            args={[1, 0.22, 20, 150]}
             position={[0, 0, 0]}
             rotation={config.background ? [0, -Math.PI / 7, 0] : [0, 0 ,0]}
         >
@@ -37,7 +37,7 @@ function Light() {
 function Sphere() {
     return (
         <mesh>
-            <sphereGeometry />
+            <sphereGeometry args={[1, 20, 150]}/>
             <meshBasicMaterial color="black" />
             <Light />
         </mesh>

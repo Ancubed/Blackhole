@@ -9,7 +9,7 @@ function Circles() {
     const ref = useRef()
 
     const [colorMap, normalMap, roughnessMap] = useLoader(TextureLoader, [
-        'textures/torus/Marble012_1K_Color.jpg',
+        'textures/torus/Starmap.png',
         'textures/torus/Marble012_1K_NormalGL.jpg',
         'textures/torus/Marble012_1K_Roughness.jpg',
     ])
@@ -19,7 +19,7 @@ function Circles() {
     return (
         <Torus 
             ref={ref} 
-            args={[1, 2, 2, 100]}
+            args={[1, 2, 2, 5000]}
             position={[0, 0, 0]}
             rotation={[-Math.PI / 2, -Math.PI / 18, 0]}
         >
