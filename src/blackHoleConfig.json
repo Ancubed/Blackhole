@@ -3,5 +3,5 @@
     "circlesRotationSpeed": 0.002,
     "lightsRotationSpeed": 0.003,
 
-    "background": true
+    "background": false
 }
