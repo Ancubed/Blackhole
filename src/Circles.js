@@ -3,6 +3,8 @@ import { useFrame, useLoader } from '@react-three/fiber'
 import { Torus, MeshDistortMaterial } from '@react-three/drei'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
+import config from './blackHoleConfig.json'
+
 function Circles() {
     const ref = useRef()
 
@@ -12,7 +14,7 @@ function Circles() {
         'textures/torus/Marble012_1K_Roughness.jpg',
     ])
 
-    useFrame((state, delta) => (ref.current.rotation.z += 0.002))
+    useFrame((state, delta) => (ref.current.rotation.z += config.circlesRotationSpeed))
 
     return (
         <Torus 

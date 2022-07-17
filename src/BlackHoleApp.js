@@ -1,35 +1,31 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 
 import BlackHole from './BlackHole';
+import Stars from './Stars';
+
+import config from './blackHoleConfig.json'
 
 function BlackHoleApp() {
   return (
     <>
-      <Canvas style={{ background: "black" }} camera={{ position: [0, 0, 100] }}>
+      <Canvas style={{ background: "black" }} linear camera={{ fov: 40 }}>
             <ambientLight intensity={1} />
             <OrbitControls
                 makeDefault
-                minAzimuthAngle={-0.8}
+                minAzimuthAngle={-0.6}
                 maxAzimuthAngle={0.4}
                 minPolarAngle={1.468}
                 maxPolarAngle={1.550}
-                maxDistance={8}
+                maxDistance={6}
                 minDistance={4}
                 enableZoom={true}
                 enablePan={true}
                 zoomSpeed={0.2}
+                target={config.background ? [0, 100, -1] : [0, 0 ,0]}
             />
-            <Stars 
-              radius={10} 
-              depth={130} 
-              count={2500} 
-              factor={6} 
-              saturation={0} 
-              fade 
-              speed={1} 
-            />
+            <Stars />
             <BlackHole />
         </Canvas>
     </>
