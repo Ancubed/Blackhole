@@ -26,7 +26,7 @@ function BlackHoleApp() {
                 target={config.background ? [0, 100, -1] : [0, 0 ,0]}
             />
             <Stars />
-            <BlackHole />
+            <BlackHole position={[2.5, 100, 0]}/>
         </Canvas>
     </>
   );
