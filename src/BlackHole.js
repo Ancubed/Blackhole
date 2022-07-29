@@ -3,9 +3,9 @@ import Sphere from "./Sphere"
 
 import config from './blackHoleConfig.json'
 
-function BlackHole({ position = [2.5, 100, 0] }) {
+function BlackHole({ position, rotation, scale }) {
     return (
-        <mesh position={config.background && position ? position : [0, 0 ,0]}>
+        <mesh position={position} rotation={rotation} scale={scale}>
             <Sphere />
             <Circles />
         </mesh>
