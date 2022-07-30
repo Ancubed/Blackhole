@@ -19,8 +19,8 @@ function BlackHoleApp() {
                 maxAzimuthAngle={0.4}
                 minPolarAngle={1.468}
                 maxPolarAngle={1.550}
-                maxDistance={6}
-                minDistance={4}
+                maxDistance={10}
+                minDistance={5}
                 enableZoom={true}
                 enablePan={false}
                 zoomSpeed={0.2}
